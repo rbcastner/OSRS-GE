@@ -10,21 +10,19 @@ store_list=[]
 name_list=[]
 
 for item in data:
-    item_number.append(item)
+    item_number.append(int(item))
     
 for k in data: 
     my_dict.append(data[k])
 
-for store in my_dict: 
-    store_dict = store
-    store_list.append(store_dict['store'])
+#for store in my_dict: 
+#    store_dict = store
+#    store_list.append(store_dict['store'])
 
 for name in my_dict: 
     name_dict = name 
-    name_list.append(name_dict['name'])
+    name_list.append(name_dict['name'].lower())
 
-name_to_id = dict(zip(name_list, item_number))
-id_to_name = dict(zip(item_number, name_list))
-
-print (name_to_id['Cannonball'])
-print (id_to_name['2'])
+dict_keys = name_list+item_number
+dict_values = item_number+name_list
+item_query_dict = dict(zip(dict_keys,dict_values))
