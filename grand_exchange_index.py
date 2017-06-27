@@ -1,7 +1,7 @@
 import json
 import pandas 
 
-with open('/Users/nicholasramos/pythonstuff/test.txt') as data_file:    
+with open('ge_store_data.json') as data_file:    
    data = json.load(data_file)
 
 item_number=[] 
